@@ -1,0 +1,66 @@
+\section{元のコード}
+
+問題に沿って、モデルを記述する。
+コード~\ref{code:original}内の philosopher プロセスは、
+哲学者の行動を表している。
+
+\lstinputlisting[language={promela},
+	caption={元のコード (dining\_philosophers\_v1.pml)},
+	label={code:original}]
+	{code/dining_philosophers_v1.pml}
+
+\newpage
+
+\section{デッドロックの回避}
+
+コード~\ref{code:original}では、
+全ての哲学者が右手にフォークを持っていた場合、
+全ての哲学者が左側にフォークが置かれるのを待つ状態になり、
+これ以上プロセスが進まないデッドロックに陥る。
+
+このデッドロックを回避するために、哲学者は、
+\begin{enumerate}
+	\item 右側のフォークを取る
+	\item 左側のフォークが既に取られていた場合、右手のフォークを置く
+\end{enumerate}
+という操作を行う(コード\ref{code:deadlock})。
+
+\lstinputlisting[language={promela},
+	caption={デッドロックを回避するコード (dining\_philosophers\_v2.pml)},
+	label={code:deadlock}]{code/dining_philosophers_v2.pml}
+
+\newpage
+
+\section{進行性の成立}
+
+コード~\ref{code:deadlock}では、
+ある哲学者が連続して右手にフォークを持ち続けた場合、
+その右の哲学者は左手にフォークを持つことができないため、
+進行性が成立しない。
+
+進行性を成立させるために、哲学者の食事の管理を行う 
+管理者を用意した。
+管理者は哲学者の食事要請をキューに格納し、
+順番に一人ずつ哲学者に食事をさせる。
+
+管理者と哲学者は、
+\begin{enumerate}
+	\item 哲学者が管理者に食事要請メッセージを送る
+	\item 管理者は食事要請メッセージをキューに入れる
+	\item 管理者はキュー先頭の食事要請メッセージに対して、食事開始メッセージを送る
+	\item 哲学者は食事開始メッセージを受ける
+	\item 哲学者は右・左のフォークを持つ
+	\item 哲学者は食事する
+	\item 哲学者は右・左のフォークを置く
+	\item 哲学者は管理者に食事終了メッセージを送る
+	\item 管理者は食事終了メッセージを受ける
+	\item 3. へ戻り、キューの食事要請を処理する
+\end{enumerate}
+の流れでやりとりを行う(コード\ref{code:progressive})。
+コード~\ref{code:progressive}の manager プロセスは、
+管理者の行動を表している。
+
+\lstinputlisting[language={promela},
+	caption={進行性が成立するコード (dining\_philosophers\_v3.pml)},
+	label={code:progressive}]
+	{code/dining_philosophers_v3.pml}

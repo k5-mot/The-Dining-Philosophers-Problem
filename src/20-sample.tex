@@ -1,0 +1,154 @@
+\section{Samples} \label{section:samples}
+
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+
+\subsection{Itemize}
+\begin{itemize}
+	\item Python
+	\item Java
+	\item Ruby
+\end{itemize}
+
+\subsection{Enumerate}
+\begin{enumerate}
+	\item Python
+	\item Java
+	\item Ruby
+\end{enumerate}
+
+\subsection{Description}
+\begin{description}
+	\item[Python] Python
+	\item[Java]   Java
+	\item[Ruby]   Ruby
+\end{description}
+
+\subsection{Itembox}
+\begin{itembox}[l]{Myouji}
+	スズキ\\
+	斎藤
+\end{itembox}
+
+\subsection{Multicol1}
+\begin{multicols}{2}
+	\begin{itembox}[l]{Myouji}
+		スズキ\\
+		斎藤
+	\end{itembox}
+	\begin{itembox}[l]{Namae}
+		イチロー\\
+		ジロー
+	\end{itembox}
+\end{multicols}
+
+
+\subsection{Multicol2}
+\begin{multicols}{2}
+	AAAAA
+	BBBBB
+	CCCCC
+	DDDDD
+	EEEEE
+	FFFFF
+	GGGGG
+
+	AAAAA
+	BBBBB
+	CCCCC
+	DDDDD
+	EEEEE
+	FFFFF
+	GGGGG
+
+	AAAAA
+	BBBBB
+	CCCCC
+	DDDDD
+	EEEEE
+	FFFFF
+	GGGGG
+\end{multicols}
+
+\subsection{Figure}
+\begin{itemize}
+	\item 世阿弥 (図\ref{figure:zeami})
+\end{itemize}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=60mm]{./image/misc/nigaoe_zeami.png}
+	\caption{世阿弥}
+	\label{figure:zeami}
+\end{figure}
+
+\subsection{Table}
+\begin{itemize}
+	\item 九州 (表\ref{table:kyusyu})
+\end{itemize}
+\begin{table}[htbp]
+	\centering
+	\caption{九州}
+	\label{table:kyusyu}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		都道府県 & 人口(人)  & 面積(\(km^2\)) & 域内総生産(円)     \\ \hline \hline
+		福岡     & 5,108,038 & 4847.32        & 18,084,000,000,000 \\ \hline
+		佐賀     & 807,203   & 2439.67        & 2,093,500,000,000  \\ \hline
+		長崎     & 1,305,650 & 4105.88        & 4,037,900,000,000  \\ \hline
+		熊本     & 1,732,644 & 7267.93        & 5,070,800,000,000  \\ \hline
+		大分     & 1,121,589 & 5099.65        & 4,047,300,000,000  \\ \hline
+		宮崎     & 1,061,032 & 6794.78        & 3,056,000,000,000  \\ \hline
+		鹿児島   & 1,586,435 & 9044.66        & 5,035,700,000,000  \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Equation}
+\begin{equation}
+	\frac{\partial u\left(x,y,t\right)}{\partial t}
+	= D \left(\frac{{\partial}^2 u\left(x,y,t\right)}{\partial{x}^2}
+	+ \frac{\partial^2 u\left(x,y,t\right)}{\partial y^2}\right)
+\end{equation}
+\begin{equation}
+	\left\{ \,
+	\begin{aligned}
+		 & 7x + 2y = -5 \\
+		 & 2x + 5y = 8
+	\end{aligned}
+	\right.
+\end{equation}
+
+\subsection{Code}
+\begin{itemize}
+	\item C言語 (コード\ref{code:c_lang})
+\end{itemize}
+\begin{lstlisting}[language={c},caption={C言語},label={code:c_lang}]
+#include <stdio.h>
+int main(int argc, char* argv[])
+{
+  // 日本語
+  printf("Hello world!");
+}
+\end{lstlisting}
+
+\subsection{Input Code}
+\begin{itemize}
+	\item Python (コード\ref{code:python})
+\end{itemize}
+\lstinputlisting[language={Python},caption={Python},label={code:python}]{code/cmdline.py}
+
+\subsection{Bibliography}
+\begin{itemize}
+	\item VGG \cite{bib:simonyan2014very}
+	\item ResNet \cite{bib:he2016deep}
+	\item SSD \cite{bib:liu2016ssd}
+	\item Image Captioning \cite{bib:xu2015show}
+	\item U-Net \cite{bib:ronneberger2015u}
+	\item Mask R-CNN \cite{bib:he2017mask}
+	\item Clique Net \cite{bib:yang2018convolutional}
+\end{itemize}
+

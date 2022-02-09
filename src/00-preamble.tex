@@ -1,0 +1,112 @@
+\pagestyle{plain}
+%
+%% Package ------------------------------------
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{amsmath,amssymb}
+\usepackage{ascmac}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{listings,style/jlisting}
+\usepackage{url}
+%
+%% Package Settings ---------------------------
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{39\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+%
+% 限界まで余白を削る
+\setlength{\hoffset}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+%
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+%
+%% Code printing settings.
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  %commentstyle={\small\itshape\color{deepgreen}},
+  commentstyle={\small\color{deepgreen}},
+  keywordstyle={\small\bfseries\color{deepblue}},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily\color{deepred}},
+  tabsize=4,
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=3zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+%
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textbf{#1}}
+%
+% Use divergence
+\newcommand{\divergence}{\mathrm{div}\,}
+% Use gradient
+\newcommand{\grad}{\mathrm{grad}\,}
+% Use rotation
+\newcommand{\rot}{\mathrm{rot}\,}
+% Use date for Japanese
+\newcommand{\todayJP}{\number\year 年\number\month 月\number\day 日}
+%
+% the caption label for it.
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\lstlistingname}{コード}
+% the header name for the list of it.
+\renewcommand{\listfigurename}{図目次}
+\renewcommand{\listtablename}{表目次}
+\renewcommand{\lstlistlistingname}{コード目次}
+%
+%
+%% \maketitleの余白を調整 ver 1.0
+% \makeatletter
+% \renewcommand{\@maketitle}{\newpage
+% % \null
+% % \vskip 2em
+% \begin{center}
+% {\LARGE \@title \par} \vskip 1.5em {\large \lineskip .5em
+% \begin{tabular}[t]{c}\@author
+% \end{tabular}\par}
+% \vskip 1em {\large \@date} \end{center}
+% \par
+% \vskip 1.5em}
+% \makeatother
+%
+%% \maketitleの余白を調整 ver 2.0
+\makeatletter
+\def\subject#1{\def\@subject{#1}}
+\def\id#1{\def\@id{#1}}
+\def\master#1{\def\@master{#1}}
+\def\department#1{\def\@department{#1}}
+\def\@maketitle{
+\begin{center}
+{\Large \@subject \par} %修士論文と記載される部分
+%\vspace{10mm}
+{\huge\bf \@title \par}% 論文のタイトル部分
+\vspace{5mm}
+{\large \@department　\@master \par} % 所属部分
+{\large \@id　\@author\par} % 学籍番号部分
+\vspace{5mm}
+\end{center}
+%\par\vskip 1.5em
+}
+\makeatother
+%
+%
+% 折り返し
+\sloppy
