@@ -24,8 +24,18 @@
 	+ 哲学者の食事の管理を行う管理者を用意する。
 	+ 管理者は哲学者の食事要請をキューに格納し、順番に一人ずつ哲学者に食事をさせる。
 
+## 🦄 Source code / ソースコード
+
++ [元のコード](./code/dining_philosophers_v1.pml)
++ [デッドロックを回避するコード](./code/dining_philosophers_v2.pml)
++ [進行性が成立するコード](./code/dining_philosophers_v3.pml)
+
+## 🐪 Report / レポート
+
++ [レポート](./build/index.pdf)
+
 ## 🍋 License
 
 Copyright (c) 2020-2022 k5-mot All Rights Reserved.
 
-"k5-mot/handout_template" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+"k5-mot/The-Dining-Philosophers-Problem" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
