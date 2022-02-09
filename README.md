@@ -34,7 +34,13 @@
 
 + [レポート](./build/index.pdf)
 
-## 🍋 License
+## References / 参考文献
+
++ [設計モデル検証（応用編）―第一回:並行分散システムの設計の難しさ―](http://files.topse.jp/pdf/sample/mc2_index.pdf)
++ [SPINによるモデル検査(1)](http://swest.toppers.jp/SWEST10/minutes/S2-a-material-nonaka.pdf)
++ [Mini Project: Dining Philosophers](https://www.palfrader.org/research/misc/2010-dining-philosophers.pdf)
+
+## 🍋 License / ライセンス
 
 Copyright (c) 2020-2022 k5-mot All Rights Reserved.
 
